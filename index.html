@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- https://static.collectui.com/shots/3850371/dark-movie-ui-exploration-large -->
+    <!-- https://static.collectui.com/shots/2784829/mofish-large -->
+    <!-- https://static.collectui.com/shots/3567427/movie-review-page-large -->
+    <main class="container">
+      <nav class="nav close">
+        <div class="nav__btn">
+          <div class="nav__btn__logo"></div>
+        </div>
+        <div class="nav--list">
+          <ul class="nav__items">
+            <li class="nav__item active"><img class="svg" src="./svg/box.svg" alt="Discover" /><span
+                class="text">Discover</span></li>
+            <li class="nav__item"><img class="svg" src="./svg/filter.svg" alt="Recommendations" /><span
+                class="text">Recommendations</span></li>
+            <li class="nav__item"><img class="svg" src="./svg/film.svg" alt="Movies" /><span class="text">Movies</span>
+            </li>
+            <li class="nav__item"><img class="svg" src="./svg/airplay.svg" alt="Shows" /><span class="text">Shows</span>
+            </li>
+          </ul>
+        </div>
+        <div class="profile">
+          <div class="profile__img"></div>
+          <div class="profile__name"><span class="text">Eric Hoffman</span></div>
+        </div>
+      </nav>
+      <section class="display">
+        <div class="display__nav">
+          <header class="search">
+            <label for="search__field"></label>
+            <input type="text" class="search__field" id="search__field" placeholder="Search movies, tv shows">
+          </header>
+        </div>
+        <main class="result">
+        </main>
+        <footer class="footer">
+          <ul class="pagination">
+            <li class="page active">1</li>
+            <li class="page">2</li>
+            <li class="page">3</li>
+            <li class="page">4</li>
+            <li class="page">5</li>
+            <li class="page">6</li>
+            <li class="page">7</li>
+            <li class="page next">→</li>
+          </ul>
+        </footer>
+
+      </section>
+
+
+
+
+    </main>
+
+    <script type="module" src="config.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+
+</html>
