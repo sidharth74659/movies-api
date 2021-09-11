@@ -44,12 +44,14 @@ body {
 }
 
 .nav {
-  width: 220px;
-
+  width: 280px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--nav-bg-clr);
   color: var(--nav-text-clr);
+  position: sticky;
+  top: 0;
 }
 .close.nav {
   width: 50px;
@@ -58,8 +60,8 @@ body {
 .nav__btn {
   position: relative;
   margin: 1rem 0;
-  transform: translateX(10rem);
-  transition: transform 0.3s ease-in-out;
+  transform: translateX(12rem);
+  transition: transform 0.4s ease-in-out;
 }
 .close .nav__btn {
   transform: translateX(0.8rem);
@@ -227,7 +229,7 @@ label {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    calc(var(--movie-poster-size) + 12px)
+    calc(var(--movie-poster-size) + 20px)
   );
   row-gap: 2.5rem;
   column-gap: 0.2rem;
@@ -255,6 +257,12 @@ label {
   height: 90%;
   background: #000;
   border-radius: 1px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.movie__poster__img:hover {
+  transform: scale(1.06);
+
 }
 
 .movie__title {
