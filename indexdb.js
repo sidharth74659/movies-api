@@ -117,3 +117,85 @@ console.log("asfasf");
 
 
 }
+
+
+
+
+
+
+
+
+
+//trying localstorage
+
+async function loadPopularMoviesFromNetwork(pageNumber = 1) {
+    DisplayMovies(pageNumber)
+    // if (localStorage.getItem(`page${pageNumber}`) === null) {
+    //     let res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${api_key}&language=en-US&page=${pageNumber}`)
+    //     let data = await res.json();
+    //     console.log("from network");
+    //     loadIntoLocalStorage(pageNumber, data);
+    // } else {
+    //     console.log("from console");
+    //     DisplayMovies(JSON.parse(localStorage.getItem(`page${pageNumber}`)));
+    // }
+}
+
+
+// async function loadIntoLocalStorage(pageNumber, { results: data }) {
+
+    // for (let movie of data) {
+
+    //     let img_blob = await fetch(`https://image.tmdb.org/t/p/w185${movie.poster_path}`).then(res => res.blob());  //this contains the img_blob that is  size andd type of file (image/jpeg)
+
+    //     console.log(img_blob);
+    //     //from 'dcode' youtube channel on 'how to save images to local storage'  
+    //     let img_reader = new FileReader();
+    //     img_reader.onload = () => (movie.poster_path = img_reader.result);
+    //     img_reader.readAsDataURL(img_blob);
+    //     console.log(movie.poster_path);
+    //     await Promise.all(img_reader.onload)
+
+    // }
+
+
+    //map the data where each movie has a poster_path as a blob 
+    // const promises = data.map(async movie => {
+
+    //     //this contains the img_blob that is  size andd type of file (image/jpeg)
+    //     movie.poster_path = await fetch(`https://image.tmdb.org/t/p/w185${movie.poster_path}`)
+    //         .then(res => res.blob())
+    //         .then(img_blob => {
+    //             // change movie.poster_path for each to a data url
+    //             return URL.createObjectURL(img_blob);
+    //         })
+
+    //     console.log(movie.poster_path);
+    //     //from 'dcode' youtube channel on 'how to save images to local storage'  
+    //     // let img_reader = new FileReader();
+    //     // img_reader.readAsDataURL(img_blob);
+    //     // img_reader.onload = () => (movie.poster_path = img_reader.result);
+    //     // console.log(movie.poster_path);
+
+    // })
+
+    // for (let movie of data) {
+    //     movie.poster_path = await fetch(`https://image.tmdb.org/t/p/w185${movie.poster_path}`)
+    //         .then(res => res.blob())
+    //         .then(img_blob => {
+    //             // change movie.poster_path for each to a data url
+    //             return URL.createObjectURL(img_blob);
+    //         })
+    // }
+    // console.log(data)
+    // localStorage.setItem(`page${pageNumber}`, JSON.stringify(data))
+    //     // DisplayMovies(data);
+    // DisplayMovies(JSON.parse(localStorage.getItem(`page${pageNumber}`)), false);
+
+    // Promise.all(promises).then(data => {
+    //     console.log(data)
+    // });
+    // DisplayMovies(JSON.parse(localStorage.getItem(`page${pageNumber}`)), false);
+
+
+}
